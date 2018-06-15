@@ -1,13 +1,14 @@
 <?php 
 	include("cabecalho.php");
-	$nome = $_POST[""];
-	$tipo = $_POST[""];
-	$cpf = $_POST[""];
-	$historico = $_POST[""];
 	
-	$sql = "INSERT INTO veterinaria('nome','tipo','cpf','historico') VALUES ('$nome','$tipo','$cpf','$historico')";
+	$nome = $_POST["nome"];
+	$tipo = $_POST["tipo"];
+	$cpf = $_POST["cpf"];
+	$historico = $_POST["historico"];
 	
-	mysqli_query($sql,$conexao);
+	$sql = "INSERT INTO veterinaria(nome,tipo,cpf,historico) VALUES ('$nome','$tipo','$cpf','$historico')";
+	
+	mysqli_query($conexao,$sql);
 	
 	header("location:cadastro.php");
 ?>

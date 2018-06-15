@@ -5,10 +5,10 @@
 	</head>
 	<body>
 		<?php 
-		$conexao = mysqli_connect("vini","localhost","12345");
-		$banco = mysqli_select_db("prova",$conexao);
+		$conexao = mysqli_connect("localhost", "vini", "12345");
+		$banco = mysqli_select_db($conexao, "prova");
 		?>
 		<a href="index.php">Index</a>	|	
-		<a href="">Cadastrar Animal</a>	|	
-		<a href="">Mostrar Todos</a>	|	
-		<a href="">Mostrar somente pelo CPF</a>
+		<a href="cadastro.php">Cadastrar Animal</a>	|	
+		<a href="listar.php">Mostrar Todos</a>	|	
+		<a href="informar_cpf.php">Mostrar somente pelo CPF</a>
